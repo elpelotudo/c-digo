@@ -1,0 +1,81 @@
+// Receive a player index and modify the title according to the level
+void settitle(int index) {
+	if(file_exists("players/"+players[index].charname+"/cheater.usr")) {
+		players[index].title ="Cheater";
+		return;
+	}
+	if(players[index].afk==true) players[index].title="Ausente";
+			else if(players[index].pacifico==1&&players[index].afk==false) players[index].title="ser_de_luz";
+			else if(players[index].pacifico==0&&players[index].afk==false&&players[index].newbie==true) players[index].title="Novat"+players[index].sexo2+"";
+			else if(players[index].level<=200&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+				if(players[index].sexo==0){
+players[index].title="vampira";
+}
+else{
+players[index].title="vampiro";
+}
+			else if(players[index].level>200 and players[index].level<=1000&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+				if(players[index].sexo==0){
+			players[index].title="vampira_diurna";
+}
+else{
+			players[index].title="vampiro_diurno";
+}
+			else if(players[index].level>1000 and players[index].level<=2000&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+				if(players[index].sexo==0){
+			players[index].title="jefa_de_clan";
+}
+else{
+players[index].title="jefe_de_clan";
+}
+			else if(players[index].level>2000 and players[index].level<=3000&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+					players[index].title="licántropo";
+			else if(players[index].level>3000 and players[index].level<=4000&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+				if(players[index].sexo==0){
+			players[index].title="segunda_de_la_manada";
+}
+else{
+			players[index].title="segundo_de_la_manada";
+}
+			else if(players[index].level>4000 and players[index].level<=5000&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+					players[index].title="líder_de_la_manada";
+			else if(players[index].level>5000 and players[index].level<=6000&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+				if(players[index].sexo==0){
+					players[index].title="guerrera_hada";
+				}
+				else{
+					players[index].title="guerrero_hada";
+				}
+			else if(players[index].level>6000 and players[index].level<=7000&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+				if(players[index].sexo==0){
+					players[index].title="bruja";
+				}
+				else{
+					players[index].title="brujo";
+				}
+			else if(players[index].level>7000 and players[index].level<=10000&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+				if(players[index].sexo==0){
+			players[index].title="cazadora";
+}
+else{
+players[index].title="cazador";
+}
+			else if(players[index].level>10000 and players[index].level<=12000&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+				if(players[index].sexo==0){
+			players[index].title="guerrera_oscurecida";
+}
+else{
+			players[index].title="guerrero_oscurecido";
+}
+			else if(players[index].level>12000 and players[index].level<=16000&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+			players[index].title="demonio_menor";
+			else if(players[index].level>16000 and players[index].level<=20000&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+			players[index].title="demonio_mayor";
+			else if(players[index].level>=20000 and players[index].level<=30001&&players[index].newbie==false&&players[index].pacifico==0&&players[index].afk==false)
+				if(players[index].sexo==0){
+			players[index].title="princesa_del_infierno";
+}
+else{
+			players[index].title="príncipe_del_infierno";
+}
+}
